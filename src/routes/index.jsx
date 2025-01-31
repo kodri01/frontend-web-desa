@@ -14,6 +14,7 @@ import Login from "../views/Auth/Login";
 //import viuew forbidden
 import Forbidden from "../views/Auth/Forbidden";
 import Dashboard from "../views/Admin/Dashboard/Dashboard";
+import PermissionsIndex from "../views/Admin/Permissions/Index";
 
 //import view dashboard
 
@@ -22,16 +23,22 @@ export default function RoutesIndex() {
     <Routes>
       {/* route "/login" */}
       <Route path="/login" element={<Login />} />
-
       {/* route "/forbidden" */}
       <Route path="/forbidden" element={<Forbidden />} />
-
-      {/* private route "/admin/dashboard" */}
+      //Private Route
       <Route
         path="/admin/dashboard"
         element={
           <PrivateRoutes>
             <Dashboard />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/permissions"
+        element={
+          <PrivateRoutes>
+            <PermissionsIndex />
           </PrivateRoutes>
         }
       />
