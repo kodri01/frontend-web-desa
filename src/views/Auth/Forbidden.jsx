@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
+//import layoutAuth
 import LayoutAuth from "../../layouts/Auth";
+
+//import Link from react router dom
+import { Link } from "react-router-dom";
 
 export default function Forbidden() {
   return (
@@ -11,14 +14,13 @@ export default function Forbidden() {
               <div className="card-body text-center">
                 <img
                   src="/images/no-touch.png"
-                  alt="images"
-                  width={"200"}
                   className="mt-5 mb-3"
+                  width="200"
                 />
-                <h2>Access Denied!!</h2>
+                <h2>Access Denied!</h2>
                 <Link to="/dashboard" className="btn btn-md btn-tertiary mt-3">
-                  <i className="fa fa-long-arrow-alt-left me-2"></i>
-                  Back To Dashboard
+                  <i className="fa fa-long-arrow-alt-left me-2"></i> Back to
+                  Dashboard
                 </Link>
               </div>
             </div>
