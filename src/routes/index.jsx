@@ -15,6 +15,9 @@ import Login from "../views/Auth/Login";
 import Forbidden from "../views/Auth/Forbidden";
 import Dashboard from "../views/Admin/Dashboard/Dashboard";
 import PermissionsIndex from "../views/Admin/Permissions/Index";
+import RolesIndex from "../views/Admin/Roles/Index";
+import RolesCreate from "../views/Admin/Roles/Create";
+import RolesEdit from "../views/Admin/Roles/Edit";
 
 //import view dashboard
 
@@ -39,6 +42,31 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <PermissionsIndex />
+          </PrivateRoutes>
+        }
+      />
+      {/* Route Role */}
+      <Route
+        path="/admin/roles"
+        element={
+          <PrivateRoutes>
+            <RolesIndex />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/roles/create"
+        element={
+          <PrivateRoutes>
+            <RolesCreate />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/roles/edit/:id"
+        element={
+          <PrivateRoutes>
+            <RolesEdit />
           </PrivateRoutes>
         }
       />
