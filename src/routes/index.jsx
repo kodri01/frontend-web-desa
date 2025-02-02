@@ -21,6 +21,9 @@ import RolesEdit from "../views/Admin/Roles/Edit";
 import UserIndex from "../views/Admin/Users/Index";
 import UserCreate from "../views/Admin/Users/Create";
 import UserEdit from "../views/Admin/Users/Edit";
+import CategoryIndex from "../views/Admin/Categories/Index";
+import CategoryCreate from "../views/Admin/Categories/Create";
+import CategoryEdit from "../views/Admin/Categories/Edit";
 
 //import view dashboard
 
@@ -95,6 +98,31 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <UserEdit />
+          </PrivateRoutes>
+        }
+      />
+      {/* Route Category */}
+      <Route
+        path="/admin/categories"
+        element={
+          <PrivateRoutes>
+            <CategoryIndex />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/categories/create"
+        element={
+          <PrivateRoutes>
+            <CategoryCreate />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/categories/edit/:id"
+        element={
+          <PrivateRoutes>
+            <CategoryEdit />
           </PrivateRoutes>
         }
       />
