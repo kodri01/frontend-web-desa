@@ -23,20 +23,20 @@ export default function PermissionsIndex() {
     const page = pageNumber ? pageNumber : pagination.currentPage;
 
     // fecth data from API
-    await Api.get(`/api/admin/permissions?search=${keywords}&${page}`, {
+    await Api.get(`/api/admin/permissions?search=${keywords}&page=${page}`, {
       headers: {
         // header bearer token
         Authorization: `Bearer ${token}`,
       },
-    }).then((respone) => {
+    }).then((response) => {
       //set data respon to state "categories"
-      setPermissions(respone.data.data.data);
+      setPermissions(response.data.data.data);
 
       //set data respon Pagination
       setPagination(() => ({
-        currentPage: respone.data.data.current_page,
-        perPage: respone.data.data.per_page,
-        total: respone.data.data.total,
+        currentPage: response.data.data.current_page,
+        perPage: response.data.data.per_page,
+        total: response.data.data.total,
       }));
     });
   };
@@ -128,7 +128,7 @@ export default function PermissionsIndex() {
                     currentPage={pagination.currentPage}
                     perPage={pagination.perPage}
                     total={pagination.total}
-                    onChange={(pageNumber) => fetchData(pageNumber, keywords)}
+                    onChange={(pageNumber) => fecthData(pageNumber, keywords)}
                     position="end"
                   />
                 </div>
