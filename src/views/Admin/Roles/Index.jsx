@@ -98,7 +98,7 @@ export default function RolesIndex() {
                         className="btn btn-md btn-primary border-0 shadow w-100"
                         type="button"
                       >
-                        Add New
+                        <i className="fa fa-plus-circle"></i> Add New
                       </Link>
                     </div>
                   )}
