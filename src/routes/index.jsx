@@ -24,6 +24,9 @@ import UserEdit from "../views/Admin/Users/Edit";
 import CategoryIndex from "../views/Admin/Categories/Index";
 import CategoryCreate from "../views/Admin/Categories/Create";
 import CategoryEdit from "../views/Admin/Categories/Edit";
+import PostsIndex from "../views/Admin/Posts/Index";
+import PostsCreate from "../views/Admin/Posts/Create";
+import PostsEdit from "../views/Admin/Posts/Edit";
 
 //import view dashboard
 
@@ -123,6 +126,31 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <CategoryEdit />
+          </PrivateRoutes>
+        }
+      />
+      {/* Route Posts */}
+      <Route
+        path="/admin/posts"
+        element={
+          <PrivateRoutes>
+            <PostsIndex />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/posts/create"
+        element={
+          <PrivateRoutes>
+            <PostsCreate />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/posts/edit/:id"
+        element={
+          <PrivateRoutes>
+            <PostsEdit />
           </PrivateRoutes>
         }
       />
