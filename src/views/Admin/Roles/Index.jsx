@@ -27,7 +27,7 @@ export default function RolesIndex() {
   const fetchData = async (pageNumber = 1, keywords = "") => {
     const page = pageNumber ? pageNumber : pagination.currentPage;
 
-    await Api.get(`/api/admin/roles?search${keywords}&page${page}`, {
+    await Api.get(`/api/admin/roles?search=${keywords}&page=${page}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
