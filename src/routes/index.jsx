@@ -30,6 +30,9 @@ import PostsEdit from "../views/Admin/Posts/Edit";
 import PagesIndex from "../views/Admin/Pages/Index";
 import PagesCreate from "../views/Admin/Pages/Create";
 import PagesEdit from "../views/Admin/Pages/Edit";
+import ProductsIndex from "../views/Admin/Products/Index";
+import ProductsCreate from "../views/Admin/Products/Create";
+import ProductsEdit from "../views/Admin/Products/Edit";
 
 //import view dashboard
 
@@ -179,6 +182,31 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <PagesEdit />
+          </PrivateRoutes>
+        }
+      />
+      {/* Route Product */}
+      <Route
+        path="/admin/products"
+        element={
+          <PrivateRoutes>
+            <ProductsIndex />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/products/create"
+        element={
+          <PrivateRoutes>
+            <ProductsCreate />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/products/edit/:id"
+        element={
+          <PrivateRoutes>
+            <ProductsEdit />
           </PrivateRoutes>
         }
       />
