@@ -40,7 +40,8 @@ import AparatursIndex from "../views/Admin/aparaturs/Index";
 import AparatursCreate from "../views/Admin/aparaturs/Create";
 import AparatursEdit from "../views/Admin/aparaturs/Edit";
 
-//import view dashboard
+// Route Web View
+import Home from "../views/Web/Home/Index";
 
 export default function RoutesIndex() {
   return (
@@ -267,6 +268,8 @@ export default function RoutesIndex() {
           </PrivateRoutes>
         }
       />
+      {/* route web */}
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
