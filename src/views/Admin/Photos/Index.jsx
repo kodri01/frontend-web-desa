@@ -128,9 +128,12 @@ export default function PhotosIndex() {
                             </th>
                             <th className="border-0">Image</th>
                             <th className="border-0">Caption</th>
-                            <th className="border-0" style={{ width: "15%" }}>
-                              Actions
-                            </th>
+
+                            {hasAnyPermission(["photos.delete"]) && (
+                              <th className="border-0" style={{ width: "15%" }}>
+                                Actions
+                              </th>
+                            )}
                           </tr>
                         </thead>
                         <tbody>
@@ -150,16 +153,16 @@ export default function PhotosIndex() {
                                   />
                                 </td>
                                 <td>{photo.caption}</td>
-                                <td className="text-center">
-                                  {hasAnyPermission(["photos.delete"]) && (
+                                {hasAnyPermission(["photos.delete"]) && (
+                                  <td className="text-center">
                                     <button
                                       className="btn btn-danger me-2"
                                       onClick={() => deletePhoto(photo.id)}
                                     >
                                       <i className="fa fa-trash"></i>
                                     </button>
-                                  )}
-                                </td>
+                                  </td>
+                                )}
                               </tr>
                             ))
                           ) : (

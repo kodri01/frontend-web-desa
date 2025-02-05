@@ -97,9 +97,11 @@ export default function SlidersIndex() {
                               No.
                             </th>
                             <th className="border-0">Image</th>
-                            <th className="border-0" style={{ width: "15%" }}>
-                              Actions
-                            </th>
+                            {hasAnyPermission(["sliders.delete"]) && (
+                              <th className="border-0" style={{ width: "15%" }}>
+                                Actions
+                              </th>
+                            )}
                           </tr>
                         </thead>
                         <tbody>
@@ -121,16 +123,16 @@ export default function SlidersIndex() {
                                       className="rounded"
                                     />
                                   </td>
-                                  <td className="text-center">
-                                    {hasAnyPermission(["sliders.delete"]) && (
+                                  {hasAnyPermission(["sliders.delete"]) && (
+                                    <td className="text-center">
                                       <button
                                         className="btn btn-danger btn-sm"
                                         onClick={() => deleteData(slider.id)}
                                       >
                                         <i className="fa fa-trash"></i>
                                       </button>
-                                    )}
-                                  </td>
+                                    </td>
+                                  )}
                                 </tr>
                               ))
                             ) : (
