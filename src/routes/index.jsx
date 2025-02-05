@@ -36,6 +36,9 @@ import ProductsEdit from "../views/Admin/Products/Edit";
 import PhotosIndex from "../views/Admin/Photos/Index";
 import PhotosCreate from "../views/Admin/Photos/Create";
 import SlidersIndex from "../views/Admin/Sliders/Index";
+import AparatursIndex from "../views/Admin/aparaturs/Index";
+import AparatursCreate from "../views/Admin/aparaturs/Create";
+import AparatursEdit from "../views/Admin/aparaturs/Edit";
 
 //import view dashboard
 
@@ -236,6 +239,31 @@ export default function RoutesIndex() {
         element={
           <PrivateRoutes>
             <SlidersIndex />
+          </PrivateRoutes>
+        }
+      />
+      {/* Route Aparaturs */}
+      <Route
+        path="/admin/aparaturs"
+        element={
+          <PrivateRoutes>
+            <AparatursIndex />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/aparaturs/create"
+        element={
+          <PrivateRoutes>
+            <AparatursCreate />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/admin/aparaturs/edit/:id"
+        element={
+          <PrivateRoutes>
+            <AparatursEdit />
           </PrivateRoutes>
         }
       />
