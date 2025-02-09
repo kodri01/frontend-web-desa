@@ -51,10 +51,8 @@ export default function Home() {
             <div className="col-md-12 mb-3">
               <div className="section-title">
                 <h4>
-                  <i className="fa fa-shopping-bag"></i>
-                  <strong style={{ color: "rbg(209 104 0)" }}>
-                    PRODUK
-                  </strong>{" "}
+                  <i className="fa fa-shoping-bag"></i>
+                  <strong style={{ color: "rgb(209 104 0)" }}> PRODUK </strong>
                   DESA
                 </h4>
               </div>
