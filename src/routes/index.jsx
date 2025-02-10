@@ -43,6 +43,9 @@ import AparatursEdit from "../views/Admin/aparaturs/Edit";
 // Route Web View
 import Home from "../views/Web/Home/Index";
 import Aparaturs from "../views/Web/Aparaturs/Index";
+import Pages from "../views/Web/Pages/Index";
+import PagesShow from "../views/Web/Pages/Show";
+import Photos from "../views/Web/Photos/Index";
 
 export default function RoutesIndex() {
   return (
@@ -272,6 +275,8 @@ export default function RoutesIndex() {
       {/* route web */}
       <Route path="/" element={<Home />} />
       <Route path="/aparaturs" element={<Aparaturs />} />
+      <Route path="/pages" element={<Pages />} />
+      <Route path="/pages/:slug" element={<PagesShow />} />
     </Routes>
   );
 }
