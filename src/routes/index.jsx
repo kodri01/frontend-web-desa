@@ -277,6 +277,7 @@ export default function RoutesIndex() {
       <Route path="/aparaturs" element={<Aparaturs />} />
       <Route path="/pages" element={<Pages />} />
       <Route path="/pages/:slug" element={<PagesShow />} />
+      <Route path="/photos" element={<Photos />} />
     </Routes>
   );
 }
