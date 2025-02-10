@@ -46,6 +46,8 @@ import Aparaturs from "../views/Web/Aparaturs/Index";
 import Pages from "../views/Web/Pages/Index";
 import PagesShow from "../views/Web/Pages/Show";
 import Photos from "../views/Web/Photos/Index";
+import Posts from "../views/Web/Posts/Index";
+import PostShow from "../views/Web/Posts/Show";
 
 export default function RoutesIndex() {
   return (
@@ -278,6 +280,8 @@ export default function RoutesIndex() {
       <Route path="/pages" element={<Pages />} />
       <Route path="/pages/:slug" element={<PagesShow />} />
       <Route path="/photos" element={<Photos />} />
+      <Route path="/posts" element={<Posts />} />
+      <Route path="/posts/:slug" element={<PostShow />} />
     </Routes>
   );
 }
